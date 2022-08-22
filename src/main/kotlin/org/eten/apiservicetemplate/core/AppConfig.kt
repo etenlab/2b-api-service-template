@@ -8,18 +8,12 @@ import java.net.InetAddress
 @Component
 @EnableConfigurationProperties
 class AppConfig(
-
     @Value("\${server.hostname}")
-    val hostname: String,,
-
+    val hostname: String,
     @Value("\${env}")
     val env: ConfigEnv,
-
-    @Value("\${spring.kafka.bootstrap-servers}")
-    val kafka_bootstrap_address: String,
-
-    ) {
-
+//    @Value("\${spring.kafka.bootstrap-servers}")
+//    val kafka_bootstrap_address: String,
+) {
   val ip = InetAddress.getLocalHost().hostAddress
-
 }
